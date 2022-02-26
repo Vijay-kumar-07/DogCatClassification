@@ -29,7 +29,7 @@ classifier.compile(optimizer = 'adam', loss = 'binary_crossentropy', metrics = [
 
 # Part 2 - Fitting the CNN to the images
 
-from keras.preprocessing.image import ImageDataGenerator
+from keras.preprocessing.image import ImageDataGenerator# Run time data augmentation.
 
 train_datagen = ImageDataGenerator(rescale = 1./255,
                                    shear_range = 0.2,
@@ -53,7 +53,7 @@ model = classifier.fit_generator(training_set,
                          validation_data = test_set,    
                          validation_steps = 2000)
 
-classifier.save("model.h5")
+classifier.save("model1.h5")
 print("Saved model to disk")
 
 # Part 3 - Making new predictions
